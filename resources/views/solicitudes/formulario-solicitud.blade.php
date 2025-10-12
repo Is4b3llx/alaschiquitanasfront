@@ -22,9 +22,9 @@
                 <div class="card-body">
                     <!-- Datos del Solicitante -->
                     <div class="mb-4">
-                        <h5 class="text-primary border-bottom pb-2">
-                            <i class="fas fa-user mr-2"></i>Datos del Solicitante
-                        </h5>
+                        <div class="alert alert-info alert-dismissible">
+                            <h5><i class="icon fas fa-user"></i> Datos del Solicitante</h5>
+                        </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -61,9 +61,9 @@
 
                     <!-- Datos de Entrega -->
                     <div class="mb-4">
-                        <h5 class="text-success border-bottom pb-2">
-                            <i class="fas fa-map-marker-alt mr-2"></i>Datos de Entrega
-                        </h5>
+                        <div class="alert alert-info alert-dismissible">
+                            <h5><i class="icon fas fa-map-marker-alt"></i> Datos de Entrega</h5>
+                        </div>
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
@@ -105,9 +105,9 @@
 
                     <!-- Datos de Emergencia -->
                     <div class="mb-4">
-                        <h5 class="text-danger border-bottom pb-2">
-                            <i class="fas fa-exclamation-triangle mr-2"></i>Datos de Emergencia
-                        </h5>
+                        <div class="alert alert-info alert-dismissible">
+                            <h5><i class="icon fas fa-exclamation-triangle"></i> Datos de Emergencia</h5>
+                        </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -142,9 +142,9 @@
 
                     <!-- Insumos Necesarios -->
                     <div class="mb-4">
-                        <h5 class="text-info border-bottom pb-2">
-                            <i class="fas fa-boxes mr-2"></i>Insumos Necesarios <span class="text-danger">*</span>
-                        </h5>
+                        <div class="alert alert-info alert-dismissible">
+                            <h5><i class="icon fas fa-boxes"></i> Insumos Necesarios <span class="text-danger">*</span></h5>
+                        </div>
                         <div class="row">
                             <div class="col-md-6 col-lg-4">
                                 <div class="custom-control custom-checkbox">
