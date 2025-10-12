@@ -23,22 +23,22 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-outline-primary active" data-filter="todas">
+                            <button type="button" class="btn btn-primary active" data-filter="todas">
                                 <i class="fas fa-list"></i> Todas
                             </button>
-                            <button type="button" class="btn btn-outline-success" data-filter="recientes">
+                            <button type="button" class="btn btn-primary" data-filter="recientes">
                                 <i class="fas fa-clock"></i> Recientes
                             </button>
-                            <button type="button" class="btn btn-outline-warning" data-filter="antiguas">
+                            <button type="button" class="btn btn-primary" data-filter="antiguas">
                                 <i class="fas fa-history"></i> Antiguas
                             </button>
-                            <button type="button" class="btn btn-outline-success" data-filter="aprobadas">
+                            <button type="button" class="btn btn-primary" data-filter="aprobadas">
                                 <i class="fas fa-check"></i> Aprobadas
                             </button>
-                            <button type="button" class="btn btn-outline-danger" data-filter="rechazadas">
+                            <button type="button" class="btn btn-primary" data-filter="rechazadas">
                                 <i class="fas fa-times"></i> Rechazadas
                             </button>
-                            <button type="button" class="btn btn-outline-info" data-filter="sin_contestar">
+                            <button type="button" class="btn btn-primary" data-filter="sin_contestar">
                                 <i class="fas fa-question"></i> Sin Contestar
                             </button>
                         </div>
@@ -97,10 +97,10 @@
                 <button class="btn btn-primary btn-sm" onclick="verDetalle(1)">
                     <i class="fas fa-eye"></i> Ver Detalle
                 </button>
-                <button class="btn btn-success btn-sm" onclick="aprobar(1)">
+                <button class="btn btn-sm btn-aprobar" onclick="aprobar(1)">
                     <i class="fas fa-check"></i> Aprobar
                 </button>
-                <button class="btn btn-danger btn-sm" onclick="rechazar(1)">
+                <button class="btn btn-sm btn-rechazar" onclick="rechazar(1)">
                     <i class="fas fa-times"></i> Rechazar
                 </button>
             </div>
@@ -196,9 +196,6 @@
                 <button class="btn btn-primary btn-sm" onclick="verDetalle(3)">
                     <i class="fas fa-eye"></i> Ver Detalle
                 </button>
-                <button class="btn btn-warning btn-sm" onclick="reconsiderar(3)">
-                    <i class="fas fa-redo"></i> Reconsiderar
-                </button>
             </div>
         </div>
     </div>
@@ -244,10 +241,10 @@
                 <button class="btn btn-primary btn-sm" onclick="verDetalle(4)">
                     <i class="fas fa-eye"></i> Ver Detalle
                 </button>
-                <button class="btn btn-success btn-sm" onclick="aprobar(4)">
+                <button class="btn btn-sm btn-aprobar" onclick="aprobar(4)">
                     <i class="fas fa-check"></i> Aprobar
                 </button>
-                <button class="btn btn-danger btn-sm" onclick="rechazar(4)">
+                <button class="btn btn-sm btn-rechazar" onclick="rechazar(4)">
                     <i class="fas fa-times"></i> Rechazar
                 </button>
             </div>
@@ -284,14 +281,51 @@
 
 @push('styles')
 <style>
-/* Borde superior azul para solicitudes aprobadas */
+/* Borde superior verde para solicitudes aprobadas */
 .solicitud-card[data-estado="aprobadas"] .card {
-    border-top: 3px solid #007bff !important;
+    border-top: 3px solid #28a745 !important;
 }
 
-/* Borde superior gris para las demás */
-.solicitud-card:not([data-estado="aprobadas"]) .card {
+/* Borde superior gris para sin contestar */
+.solicitud-card[data-estado="sin_contestar"] .card {
     border-top: 3px solid #6c757d !important;
+}
+
+/* Borde superior rojo para rechazadas */
+.solicitud-card[data-estado="rechazadas"] .card {
+    border-top: 3px solid #dc3545 !important;
+}
+
+/* Estilo para badge "Sin Contestar" - gris con letra blanca */
+.solicitud-card[data-estado="sin_contestar"] .badge-warning {
+    background-color: #6c757d !important;
+    color: white !important;
+}
+
+/* Botón Rechazar - fondo gris, letra blanca */
+.btn-rechazar {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    color: white !important;
+}
+
+.btn-rechazar:hover {
+    background-color: #5a6268 !important;
+    border-color: #545b62 !important;
+    color: white !important;
+}
+
+/* Botón Aprobar - fondo blanco, letra gris */
+.btn-aprobar {
+    background-color: white !important;
+    border-color: #6c757d !important;
+    color: #6c757d !important;
+}
+
+.btn-aprobar:hover {
+    background-color: #f8f9fa !important;
+    border-color: #6c757d !important;
+    color: #6c757d !important;
 }
 </style>
 @endpush
@@ -352,11 +386,5 @@ function actualizarDireccion(id) {
     // Aquí abrirías un modal para actualizar la dirección
 }
 
-function reconsiderar(id) {
-    if (confirm('¿Está seguro de reconsiderar esta solicitud?')) {
-        alert('Solicitud #' + String(id).padStart(3, '0') + ' enviada a reconsideración');
-        // Aquí harías la petición AJAX para reconsiderar
-    }
-}
 </script>
 @endpush
