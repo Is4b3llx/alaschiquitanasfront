@@ -9,231 +9,248 @@
 @endsection
 
 @section('content')
-<!-- Small boxes (Stat box) -->
 <div class="row">
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-info">
-            <div class="inner">
-                <h3>150</h3>
-                <p>Solicitudes Nuevas</p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-file-alt"></i>
-            </div>
-            <a href="{{ route('solicitudes.listado') }}" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-success">
-            <div class="inner">
-                <h3>53</h3>
-                <p>Donaciones Recibidas</p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-gift"></i>
-            </div>
-            <a href="{{ route('donaciones.listado') }}" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-warning">
-            <div class="inner">
-                <h3 class="text-white">44</h3>
-                <p class="text-white">Solicitudes en Proceso</p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-spinner"></i>
-            </div>
-            <a href="{{ route('seguimiento') }}" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-danger">
-            <div class="inner">
-                <h3>65</h3>
-                <p>Entregas Completadas</p>
-            </div>
-            <div class="icon">
-                <i class="fas fa-check-circle"></i>
-            </div>
-            <a href="{{ route('seguimiento') }}" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-</div>
-<!-- /.row -->
-
-<!-- Main row -->
-<div class="row">
-    <!-- Left col -->
-    <section class="col-lg-7 connectedSortable">
-        <!-- Custom tabs (Charts with tabs)-->
+    <!-- Sidebar de Métricas -->
+    <div class="col-md-3">
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">
-                    <i class="fas fa-chart-pie mr-1"></i>
-                    Solicitudes por Tipo de Emergencia
+                    <i class="fas fa-chart-bar mr-2"></i>Métricas a Mostrar
                 </h3>
-            </div><!-- /.card-header -->
-            <div class="card-body">
-                <canvas id="chartEmergencias" style="height: 300px;"></canvas>
-            </div><!-- /.card-body -->
-        </div>
-        <!-- /.card -->
-
-        <!-- TO DO List -->
-        <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">
-                    <i class="fas fa-clipboard-list mr-1"></i>
-                    Últimas Solicitudes
-                </h3>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-                <ul class="todo-list" data-widget="todo-list">
-                    <li>
-                        <span class="text">Comunidad San José - Incendio</span>
-                        <small class="badge badge-danger"><i class="far fa-clock"></i> hace 2 minutos</small>
-                    </li>
-                    <li>
-                        <span class="text">Comunidad El Carmen - Inundación</span>
-                        <small class="badge badge-info"><i class="far fa-clock"></i> hace 1 hora</small>
-                    </li>
-                    <li>
-                        <span class="text">Comunidad Santa Ana - Sequía</span>
-                        <small class="badge badge-warning"><i class="far fa-clock"></i> hace 3 horas</small>
-                    </li>
-                    <li>
-                        <span class="text">Comunidad San Pedro - Granizada</span>
-                        <small class="badge badge-primary"><i class="far fa-clock"></i> hace 1 día</small>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.card-body -->
-            <div class="card-footer clearfix">
-                <a href="{{ route('solicitudes.listado') }}" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Ver todas</a>
-            </div>
-        </div>
-        <!-- /.card -->
-    </section>
-    <!-- /.Left col -->
-
-    <!-- right col (We are only adding the ID to make the widgets sortable)-->
-    <section class="col-lg-5 connectedSortable">
-        <!-- Calendar -->
-        <div class="card bg-gradient-success">
-            <div class="card-header border-0">
-                <h3 class="card-title">
-                    <i class="far fa-calendar-alt"></i>
-                    Acciones Rápidas
-                </h3>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body pt-0">
-                <div class="mt-3">
-                    <a href="{{ route('solicitudes.formulario') }}" class="btn btn-light btn-block">
-                        <i class="fas fa-plus-circle"></i> Nueva Solicitud de Insumos
-                    </a>
-                    <a href="{{ route('donaciones.listado') }}" class="btn btn-light btn-block">
-                        <i class="fas fa-gift"></i> Ver Donaciones
-                    </a>
-                    <a href="{{ route('seguimiento') }}" class="btn btn-light btn-block">
-                        <i class="fas fa-route"></i> Seguimiento de Entregas
-                    </a>
+                <div class="card-tools">
+                    <button class="btn btn-success btn-sm" onclick="toggleAll()">
+                        <i class="fas fa-check"></i> Todo
+                    </button>
                 </div>
             </div>
-            <!-- /.card-body -->
-        </div>
-        <!-- /.card -->
-
-        <!-- solid sales graph -->
-        <div class="card bg-gradient-info">
-            <div class="card-header border-0">
-                <h3 class="card-title">
-                    <i class="fas fa-th mr-1"></i>
-                    Estadísticas del Mes
-                </h3>
-            </div>
             <div class="card-body">
-                <div class="row">
-                    <div class="col-6 text-center">
-                        <div id="sparkline-1"></div>
-                        <div class="text-white">Solicitudes</div>
-                        <div class="text-white"><h3>234</h3></div>
+                <div class="form-group">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="solicitudesRecibidas" checked>
+                        <label class="custom-control-label" for="solicitudesRecibidas">Solicitudes Recibidas</label>
                     </div>
-                    <div class="col-6 text-center">
-                        <div id="sparkline-2"></div>
-                        <div class="text-white">Donaciones</div>
-                        <div class="text-white"><h3>123</h3></div>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="donacionesEntregadas" checked>
+                        <label class="custom-control-label" for="donacionesEntregadas">Donaciones Entregadas</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="tiempoRespuesta" checked>
+                        <label class="custom-control-label" for="tiempoRespuesta">Tiempo Promedio Respuesta</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="tiempoEntrega" checked>
+                        <label class="custom-control-label" for="tiempoEntrega">Tiempo Promedio Entrega</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="solicitudesMes" checked>
+                        <label class="custom-control-label" for="solicitudesMes">Solicitudes por Mes</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="productosSolicitados" checked>
+                        <label class="custom-control-label" for="productosSolicitados">Productos Más Solicitados</label>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /.card -->
+    </div>
 
-        <!-- Map card -->
-        <div class="card">
-            <div class="card-header border-transparent">
-                <h3 class="card-title">Provincias con más Solicitudes</h3>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body p-0">
-                <div class="table-responsive">
-                    <table class="table m-0">
-                        <thead>
-                            <tr>
-                                <th>Provincia</th>
-                                <th>Solicitudes</th>
-                                <th>Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Chiquitos</td>
-                                <td>45</td>
-                                <td><span class="badge badge-success">En Proceso</span></td>
-                            </tr>
-                            <tr>
-                                <td>Ñuflo de Chávez</td>
-                                <td>32</td>
-                                <td><span class="badge badge-warning">Pendiente</span></td>
-                            </tr>
-                            <tr>
-                                <td>Velasco</td>
-                                <td>28</td>
-                                <td><span class="badge badge-success">En Proceso</span></td>
-                            </tr>
-                            <tr>
-                                <td>Guarayos</td>
-                                <td>21</td>
-                                <td><span class="badge badge-info">Completado</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <!-- Contenido Principal -->
+    <div class="col-md-9">
+        <!-- Métricas Principales -->
+        <div class="row" id="metricas-principales">
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>4</h3>
+                        <p>Total Solicitudes Atendidas</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <a href="{{ route('solicitudes.listado') }}" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <!-- /.table-responsive -->
             </div>
-            <!-- /.card-body -->
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-success">
+                    <div class="inner">
+                        <h3>0</h3>
+                        <p>Donaciones Entregadas</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <a href="{{ route('donaciones.listado') }}" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3 class="text-white">&lt;1 día</h3>
+                        <p class="text-white">Tiempo Promedio Respuesta</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3>&lt;1 día</h3>
+                        <p>Tiempo Promedio Entrega</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <a href="{{ route('seguimiento') }}" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
         </div>
-        <!-- /.card -->
-    </section>
-    <!-- right col -->
+        <!-- /.row -->
+
+        <!-- Gráficos -->
+        <div class="row" id="graficos">
+            <!-- Gráfico de Barras - Solicitudes por Mes -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-chart-bar mr-1"></i>
+                            Solicitudes por Mes
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="chartSolicitudesMes" style="height: 300px;"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráfico Circular - Productos Más Solicitados -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-chart-pie mr-1"></i>
+                            Productos Más Solicitados
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="chartProductos" style="height: 300px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<!-- /.row (main row) -->
 @endsection
 
 @push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    // Gráfico de ejemplo (opcional)
-    // Puedes agregar Chart.js o cualquier otra librería de gráficos más adelante
+$(document).ready(function() {
+    // Gráfico de Solicitudes por Mes
+    const ctxSolicitudes = document.getElementById('chartSolicitudesMes').getContext('2d');
+    new Chart(ctxSolicitudes, {
+        type: 'bar',
+        data: {
+            labels: ['09/2025'],
+            datasets: [{
+                label: 'Solicitudes',
+                data: [4.0],
+                backgroundColor: '#007bff',
+                borderColor: '#0056b3',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 4.5,
+                    ticks: {
+                        stepSize: 0.5
+                    }
+                }
+            }
+        }
+    });
+
+    // Gráfico de Productos Más Solicitados
+    const ctxProductos = document.getElementById('chartProductos').getContext('2d');
+    new Chart(ctxProductos, {
+        type: 'doughnut',
+        data: {
+            labels: ['3', '15', 'No hay datos del almacén', 'Arroz', 'Lentejas'],
+            datasets: [{
+                data: [20, 25, 15, 25, 15],
+                backgroundColor: [
+                    '#007bff',
+                    '#0056b3',
+                    '#28a745',
+                    '#17a2b8',
+                    '#ffc107'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+
+    // Control de switches para mostrar/ocultar métricas
+    $('.custom-control-input').change(function() {
+        var id = $(this).attr('id');
+        var isChecked = $(this).is(':checked');
+        
+        if (id === 'solicitudesRecibidas') {
+            $('#metricas-principales .col-lg-3:first').toggle(isChecked);
+        } else if (id === 'donacionesEntregadas') {
+            $('#metricas-principales .col-lg-3:nth-child(2)').toggle(isChecked);
+        } else if (id === 'tiempoRespuesta') {
+            $('#metricas-principales .col-lg-3:nth-child(3)').toggle(isChecked);
+        } else if (id === 'tiempoEntrega') {
+            $('#metricas-principales .col-lg-3:nth-child(4)').toggle(isChecked);
+        } else if (id === 'solicitudesMes') {
+            $('#graficos .col-lg-6:first').toggle(isChecked);
+        } else if (id === 'productosSolicitados') {
+            $('#graficos .col-lg-6:nth-child(2)').toggle(isChecked);
+        }
+    });
+});
+
+function toggleAll() {
+    var allChecked = $('.custom-control-input').not(':checked').length === 0;
+    
+    $('.custom-control-input').prop('checked', !allChecked).trigger('change');
+    
+    var button = event.target.closest('button');
+    button.innerHTML = allChecked ? 
+        '<i class="fas fa-check"></i> Todo' : 
+        '<i class="fas fa-times"></i> Ninguno';
+}
 </script>
 @endpush
 
