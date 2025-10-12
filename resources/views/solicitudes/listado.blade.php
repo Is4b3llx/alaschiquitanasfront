@@ -58,7 +58,7 @@
 <div class="row" id="solicitudes-container">
     <!-- Solicitud 1 -->
     <div class="col-lg-6 col-xl-4 mb-4 solicitud-card" data-estado="sin_contestar" data-fecha="2025-01-10">
-        <div class="card card-primary card-outline">
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title">
                     <i class="fas fa-file-alt mr-1"></i>
@@ -109,7 +109,7 @@
 
     <!-- Solicitud 2 -->
     <div class="col-lg-6 col-xl-4 mb-4 solicitud-card" data-estado="aprobadas" data-fecha="2025-01-09">
-        <div class="card card-success card-outline">
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title">
                     <i class="fas fa-file-alt mr-1"></i>
@@ -157,7 +157,7 @@
 
     <!-- Solicitud 3 -->
     <div class="col-lg-6 col-xl-4 mb-4 solicitud-card" data-estado="rechazadas" data-fecha="2025-01-08">
-        <div class="card card-danger card-outline">
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title">
                     <i class="fas fa-file-alt mr-1"></i>
@@ -205,7 +205,7 @@
 
     <!-- Solicitud 4 -->
     <div class="col-lg-6 col-xl-4 mb-4 solicitud-card" data-estado="sin_contestar" data-fecha="2025-01-11">
-        <div class="card card-info card-outline">
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title">
                     <i class="fas fa-file-alt mr-1"></i>
@@ -281,6 +281,20 @@
     </div>
 </div>
 @endsection
+
+@push('styles')
+<style>
+/* Borde superior azul para solicitudes aprobadas */
+.solicitud-card[data-estado="aprobadas"] .card {
+    border-top: 3px solid #007bff !important;
+}
+
+/* Borde superior gris para las demás */
+.solicitud-card:not([data-estado="aprobadas"]) .card {
+    border-top: 3px solid #6c757d !important;
+}
+</style>
+@endpush
 
 @push('scripts')
 <script>
