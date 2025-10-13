@@ -15,12 +15,12 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Complete el formulario para solicitar insumos de emergencia</h3>
-            </div>
+        </div>
             <!-- /.card-header -->
             <form action="{{ route('solicitudes.store') }}" method="POST">
-                @csrf
+            @csrf
                 <div class="card-body">
-                    <!-- Datos del Solicitante -->
+            <!-- Datos del Solicitante -->
                     <div class="mb-4">
                         <div class="alert alert-info alert-dismissible">
                             <h5><i class="icon fas fa-user"></i> Datos del Solicitante</h5>
@@ -43,23 +43,23 @@
                                     <label for="carnet">Carnet de Identidad <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="carnet" name="carnet" required>
                                 </div>
-                            </div>
+                    </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email">Correo Electrónico <span class="text-danger">*</span></label>
                                     <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                            </div>
+                    </div>
+                    </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label for="comunidad">Comunidad Solicitante <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="comunidad" name="comunidad" required>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- Datos de Entrega -->
+            <!-- Datos de Entrega -->
                     <div class="mb-4">
                         <div class="alert alert-info alert-dismissible">
                             <h5><i class="icon fas fa-map-marker-alt"></i> Datos de Entrega</h5>
@@ -102,35 +102,35 @@
                                 <div class="form-group">
                                     <label for="provincia">Provincia <span class="text-danger">*</span></label>
                                     <select class="form-control" id="provincia" name="provincia" required>
-                                        <option value="">Seleccione una provincia</option>
-                                        <option value="Chiquitos">Chiquitos</option>
-                                        <option value="Ñuflo de Chávez">Ñuflo de Chávez</option>
-                                        <option value="Velasco">Velasco</option>
-                                        <option value="Ángel Sandoval">Ángel Sandoval</option>
-                                        <option value="Germán Busch">Germán Busch</option>
-                                        <option value="Guarayos">Guarayos</option>
-                                        <option value="Ichilo">Ichilo</option>
-                                        <option value="Sara">Sara</option>
-                                        <option value="Obispo Santistevan">Obispo Santistevan</option>
-                                        <option value="Warnes">Warnes</option>
-                                        <option value="Andrés Ibáñez">Andrés Ibáñez</option>
-                                        <option value="Ignacio Warnes">Ignacio Warnes</option>
-                                        <option value="José Miguel de Velasco">José Miguel de Velasco</option>
-                                        <option value="Cordillera">Cordillera</option>
-                                        <option value="Vallegrande">Vallegrande</option>
-                                    </select>
-                                </div>
+                            <option value="">Seleccione una provincia</option>
+                            <option value="Chiquitos">Chiquitos</option>
+                            <option value="Ñuflo de Chávez">Ñuflo de Chávez</option>
+                            <option value="Velasco">Velasco</option>
+                            <option value="Ángel Sandoval">Ángel Sandoval</option>
+                            <option value="Germán Busch">Germán Busch</option>
+                            <option value="Guarayos">Guarayos</option>
+                            <option value="Ichilo">Ichilo</option>
+                            <option value="Sara">Sara</option>
+                            <option value="Obispo Santistevan">Obispo Santistevan</option>
+                            <option value="Warnes">Warnes</option>
+                            <option value="Andrés Ibáñez">Andrés Ibáñez</option>
+                            <option value="Ignacio Warnes">Ignacio Warnes</option>
+                            <option value="José Miguel de Velasco">José Miguel de Velasco</option>
+                            <option value="Cordillera">Cordillera</option>
+                            <option value="Vallegrande">Vallegrande</option>
+                        </select>
+                    </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="celular">Nro. de Celular <span class="text-danger">*</span></label>
                                     <input type="tel" class="form-control" id="celular" name="celular" required>
                                 </div>
-                            </div>
-                        </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Datos de Emergencia -->
+            <!-- Datos de Emergencia -->
                     <div class="mb-4">
                         <div class="alert alert-info alert-dismissible">
                             <h5><i class="icon fas fa-exclamation-triangle"></i> Datos de Emergencia</h5>
@@ -146,28 +146,28 @@
                                 <div class="form-group">
                                     <label for="fecha_emergencia">Inicio de Emergencia <span class="text-danger">*</span></label>
                                     <input type="date" class="form-control" id="fecha_emergencia" name="fecha_emergencia" required>
-                                </div>
-                            </div>
+                    </div>
+                    </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label for="tipo_emergencia">Tipo de Emergencia <span class="text-danger">*</span></label>
                                     <select class="form-control" id="tipo_emergencia" name="tipo_emergencia" required>
-                                        <option value="">Seleccione el tipo de emergencia</option>
-                                        <option value="Incendio">Incendio</option>
-                                        <option value="Inundación">Inundación</option>
-                                        <option value="Sequía">Sequía</option>
-                                        <option value="Deslizamiento">Deslizamiento</option>
-                                        <option value="Terremoto">Terremoto</option>
-                                        <option value="Granizada">Granizada</option>
-                                        <option value="Vendaval">Vendaval</option>
-                                        <option value="Otro">Otro</option>
-                                    </select>
+                            <option value="">Seleccione el tipo de emergencia</option>
+                            <option value="Incendio">Incendio</option>
+                            <option value="Inundación">Inundación</option>
+                            <option value="Sequía">Sequía</option>
+                            <option value="Deslizamiento">Deslizamiento</option>
+                            <option value="Terremoto">Terremoto</option>
+                            <option value="Granizada">Granizada</option>
+                            <option value="Vendaval">Vendaval</option>
+                            <option value="Otro">Otro</option>
+                        </select>
                                 </div>
                             </div>
-                        </div>
                     </div>
+                </div>
 
-                    <!-- Insumos Necesarios -->
+                <!-- Insumos Necesarios -->
                     <div class="mb-4">
                         <div class="alert alert-info alert-dismissible">
                             <h5><i class="icon fas fa-boxes"></i> Insumos Necesarios <span class="text-danger">*</span></h5>
@@ -504,8 +504,8 @@ function actualizarProductosSeleccionadosModal() {
                         </div>
                         <button class="btn btn-sm btn-danger" onclick="eliminarProducto(${id})">
                             <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
+                </button>
+            </div>
                 </div>
             </div>
         `;
@@ -558,7 +558,7 @@ function guardarProductos() {
                         <span class="badge badge-primary">${cantidad}</span>
                     </div>
                 </div>
-            </div>
+    </div>
         `;
     });
     

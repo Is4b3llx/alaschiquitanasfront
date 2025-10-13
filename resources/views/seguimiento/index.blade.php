@@ -73,32 +73,24 @@
                                 <span class="badge badge-info">En Camino</span>
                             </div>
                             
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
-                                            <span class="text-primary">7567715</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
-                                            <span class="text-muted">Santa Cruz</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
-                                            <span class="text-muted">Barrio Copacabana, El Bajío</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
-                                            <span class="text-muted">10 de Enero, 2025</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
-                                            <span class="text-muted">13/09/2025 21:13</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                             <div class="row">
+                                 <div class="col-12">
+                                     <p class="mb-1"><strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
+                                     <span class="text-primary">7567715</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
+                                     <span class="text-muted">Santa Cruz</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
+                                     <span class="text-muted">Barrio Copacabana, El Bajío</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
+                                     <span class="text-muted">10 de Enero, 2025</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
+                                     <span class="text-muted">13/09/2025 21:13</span></p>
+                                 </div>
+                             </div>
                         </div>
                     </div>
                     
@@ -156,32 +148,24 @@
                                 <span class="badge badge-success">Entregada</span>
                             </div>
                             
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
-                                            <span class="text-primary">8564321</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
-                                            <span class="text-muted">Cochabamba</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
-                                            <span class="text-muted">Zona Norte, La Paz</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
-                                            <span class="text-muted">9 de Enero, 2025</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
-                                            <span class="text-muted">12/09/2025 15:30</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                             <div class="row">
+                                 <div class="col-12">
+                                     <p class="mb-1"><strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
+                                     <span class="text-primary">8564321</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
+                                     <span class="text-muted">Cochabamba</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
+                                     <span class="text-muted">Zona Norte, La Paz</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
+                                     <span class="text-muted">9 de Enero, 2025</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
+                                     <span class="text-muted">12/09/2025 15:30</span></p>
+                                 </div>
+                             </div>
                         </div>
                     </div>
                     
@@ -239,32 +223,24 @@
                                 <span class="badge badge-warning">Pendiente</span>
                             </div>
                             
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
-                                            <span class="text-primary">9567432</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
-                                            <span class="text-muted">Sucre</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
-                                            <span class="text-muted">Barrio Minero, Potosí</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
-                                            <span class="text-muted">11 de Enero, 2025</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
-                                            <span class="text-muted">14/09/2025 08:45</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                             <div class="row">
+                                 <div class="col-12">
+                                     <p class="mb-1"><strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
+                                     <span class="text-primary">9567432</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
+                                     <span class="text-muted">Sucre</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
+                                     <span class="text-muted">Barrio Minero, Potosí</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
+                                     <span class="text-muted">11 de Enero, 2025</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
+                                     <span class="text-muted">14/09/2025 08:45</span></p>
+                                 </div>
+                             </div>
                         </div>
                     </div>
                     
@@ -322,32 +298,24 @@
                                 <span class="badge badge-info">En Camino</span>
                             </div>
                             
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
-                                            <span class="text-primary">7568819</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
-                                            <span class="text-muted">Tarija</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
-                                            <span class="text-muted">Villa Montes, Tarija</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
-                                            <span class="text-muted">8 de Enero, 2025</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
-                                            <span class="text-muted">14/09/2025 10:20</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                             <div class="row">
+                                 <div class="col-12">
+                                     <p class="mb-1"><strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
+                                     <span class="text-primary">7568819</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
+                                     <span class="text-muted">Tarija</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
+                                     <span class="text-muted">Villa Montes, Tarija</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
+                                     <span class="text-muted">8 de Enero, 2025</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
+                                     <span class="text-muted">14/09/2025 10:20</span></p>
+                                 </div>
+                             </div>
                         </div>
                     </div>
                     
@@ -405,32 +373,24 @@
                                 <span class="badge badge-success">Entregada</span>
                             </div>
                             
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
-                                            <span class="text-primary">8569923</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
-                                            <span class="text-muted">Oruro</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
-                                            <span class="text-muted">Centro Minero, Oruro</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
-                                            <span class="text-muted">7 de Enero, 2025</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
-                                            <span class="text-muted">11/09/2025 16:15</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                             <div class="row">
+                                 <div class="col-12">
+                                     <p class="mb-1"><strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
+                                     <span class="text-primary">8569923</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
+                                     <span class="text-muted">Oruro</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
+                                     <span class="text-muted">Centro Minero, Oruro</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
+                                     <span class="text-muted">7 de Enero, 2025</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
+                                     <span class="text-muted">11/09/2025 16:15</span></p>
+                                 </div>
+                             </div>
                         </div>
                     </div>
                     
@@ -488,32 +448,24 @@
                                 <span class="badge badge-warning">Pendiente</span>
                             </div>
                             
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
-                                            <span class="text-primary">9568745</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
-                                            <span class="text-muted">Beni</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
-                                            <span class="text-muted">Riberalta, Beni</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
-                                            <span class="text-muted">12 de Enero, 2025</span>
-                                        </div>
-                                        <div class="mr-3 mb-1">
-                                            <strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
-                                            <span class="text-muted">14/09/2025 12:00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                             <div class="row">
+                                 <div class="col-12">
+                                     <p class="mb-1"><strong><i class="fas fa-user mr-1"></i> Encargado:</strong> 
+                                     <span class="text-primary">9568745</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Origen:</strong> 
+                                     <span class="text-muted">Beni</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-map-marker-alt mr-1"></i> Destino:</strong> 
+                                     <span class="text-muted">Riberalta, Beni</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-calendar mr-1"></i> Fecha:</strong> 
+                                     <span class="text-muted">12 de Enero, 2025</span></p>
+                                     
+                                     <p class="mb-1"><strong><i class="fas fa-clock mr-1"></i> Actualización:</strong> 
+                                     <span class="text-muted">14/09/2025 12:00</span></p>
+                                 </div>
+                             </div>
                         </div>
                     </div>
                     
