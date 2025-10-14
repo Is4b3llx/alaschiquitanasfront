@@ -321,17 +321,14 @@
 
 @push('styles')
 <style>
-/* Borde superior azul para donaciones entregadas */
 .donacion-card[data-estado="entregado"] .card {
     border-top: 3px solid #007bff !important;
 }
 
-/* Borde superior gris para las demás */
 .donacion-card:not([data-estado="entregado"]) .card {
     border-top: 3px solid #6c757d !important;
 }
 
-/* Estilo para el mapa simulado */
 #mapa {
     background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
     position: relative;

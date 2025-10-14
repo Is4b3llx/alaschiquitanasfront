@@ -62,7 +62,7 @@
             <!-- Datos de Entrega -->
                     <div class="mb-4">
                         <div class="alert alert-info alert-dismissible">
-                            <h5><i class="icon fas fa-map-marker-alt"></i> Datos de Entrega</h5>
+                            <h5><i class="icon fas fa-map-marker-alt"></i> Datos de la Entrega</h5>
                         </div>
                         <div class="row">
                     <div class="col-12">
@@ -173,13 +173,13 @@
                             <h5><i class="icon fas fa-boxes"></i> Insumos Necesarios <span class="text-danger">*</span></h5>
                         </div>
                         <div class="card">
-                            <div class="card-header">
+                            <div class="card-header justify-content-between">
                                 <h5 class="card-title mb-0">
-                                    <i class="fas fa-boxes"></i> Productos Seleccionados
-                                    <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#modalSeleccionarProductos">
-                                        <i class="fas fa-plus"></i> Ver Productos
-                                    </button>
+                                    Productos Seleccionados
                                 </h5>
+                                 <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#modalSeleccionarProductos">
+                                        <i class="fas fa-plus align-self-right"></i> Ver Productos
+                                </button>
                             </div>
                             <div class="card-body">
                                 <div id="productosSeleccionados">
@@ -196,13 +196,13 @@
                 </div>
                 <!-- /.card-body -->
 
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane mr-2"></i>Enviar Solicitud
-                    </button>
-                    <a href="{{ route('home') }}" class="btn btn-default">
+                <div class="card-footer d-flex justify-content-end">
+                    <a href="{{ route('home') }}" class="btn btn-default"  style="margin-right:20px;">
                         <i class="fas fa-times mr-2"></i>Cancelar
                     </a>
+                     <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane mr-2"></i>Enviar Solicitud
+                    </button>
                 </div>
             </form>
         </div>
@@ -260,7 +260,7 @@
                     
                     <!-- Columna derecha - Productos seleccionados -->
                     <div class="col-md-6 p-4" style="background-color: #f8f9fa; min-height: 500px;">
-                        <h6 class="mb-3">Productos Seleccionados:</h6>
+                        <h6 class="mb-3">Productos Seleccionados: </h6>
                         <div id="productosSeleccionadosModal">
                             <div class="text-center text-muted py-5">
                                 <i class="fas fa-box-open fa-3x mb-3" style="color: #6c757d;"></i>

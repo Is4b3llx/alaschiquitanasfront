@@ -136,7 +136,7 @@ const dashboardData = {
                 <div class="small-box bg-info">
                     <div class="inner">
                         <h3>0</h3>
-                        <p>Donaciones Entregadas</p>
+                        <p>Total de Donaciones Entregadas</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-gift"></i>
