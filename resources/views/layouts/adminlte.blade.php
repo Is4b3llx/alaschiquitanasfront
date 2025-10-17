@@ -145,10 +145,10 @@
                             <p>Galería de Agradecimiento</p>
                         </a>
                     </li>
-                    
+
                       <li class="nav-item">
                         <a href="{{ route('voluntarios') }}" class="nav-link">
-                            <i class="nav-icon fas fa-route"></i>
+                            <i class="nav-icon fas fa-users"></i>
                             <p>Voluntarios</p>
                         </a>
                     </li>

@@ -19,8 +19,8 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary active" data-filter="todos">
+                        <div class="btn-group" role="group" id="#filtrosVoluntarios">
+                            <button type="button" class="btn btn-primary" data-filter="todos">
                                 <i class="fas fa-list"></i> Todos
                             </button>
                             <button type="button" class="btn btn-primary" data-filter="activo">
@@ -46,9 +46,9 @@
 
 @php
 $voluntarios = [
-    ['nombre'=>'Carlos Pérez','edad'=>29,'provincia'=>'Andrés Ibáñez','sangre'=>'O+','estado'=>'aprobado'],
-    ['nombre'=>'María López','edad'=>33,'provincia'=>'Chiquitos','sangre'=>'A+','estado'=>'activo'],
-    ['nombre'=>'Juan Torres','edad'=>25,'provincia'=>'Velasco','sangre'=>'B-','estado'=>'inactivo'],
+    ['nombre'=>'Carlos Pérez','edad'=>29,'provincia'=>'Andrés Ibáñez','sangre'=>'O+','estado'=>'sin_estado'],
+    ['nombre'=>'María López','edad'=>33,'provincia'=>'Chiquitos','sangre'=>'A+','estado'=>'sin_estado'],
+    ['nombre'=>'Juan Torres','edad'=>25,'provincia'=>'Velasco','sangre'=>'B-','estado'=>'sin_estado'],
     ['nombre'=>'Ana Gutiérrez','edad'=>42,'provincia'=>'Cordillera','sangre'=>'AB+','estado'=>'deshabilitado'],
     ['nombre'=>'Luis Fernández','edad'=>37,'provincia'=>'Warnes','sangre'=>'O-','estado'=>'activo'],
     ['nombre'=>'Paola Roca','edad'=>28,'provincia'=>'Sara','sangre'=>'A-','estado'=>'aprobado'],
@@ -99,8 +99,23 @@ $voluntarios = [
                     <span class="badge badge-primary">Activo</span>
                   @elseif($v['estado']==='inactivo')
                     <span class="badge badge-warning">Inactivo</span>
-                  @else
+                 @elseif($v['estado']==='deshabilitado')
                     <span class="badge badge-danger">Deshabilitado</span>
+                 @elseif($v['estado']==='sin_estado')
+                    <span class="badge badge-secondary">Sin Estado</span>
+                    
+                 @endif
+               </td>
+               <td>
+                 @if($v['estado']==='sin_estado')
+                 <div class="btn-group btn-group-sm">
+                      <button type="button" class="btn btn-success js-cambiar-estado mr-2" data-target="aprobado" title="Aprobar">
+                      Aprobar
+                      </button>
+                      <button type="button" class="btn btn-danger js-cambiar-estado" data-target="deshabilitado" title="Deshabilitar">
+                      <i class="fas fa-times"></i>
+                      </button>
+                    </div>
                   @endif
                </td>
             </tr>
