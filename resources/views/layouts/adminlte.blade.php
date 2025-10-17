@@ -138,6 +138,20 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
+                     <!-- Agradecimiento -->
+                    <li class="nav-item">
+                        <a href="{{ route('agradecimiento') }}" class="nav-link">
+                            <i class="nav-icon fas fa-hands"></i>
+                            <p>Galería de Agradecimiento</p>
+                        </a>
+                    </li>
+                    
+                      <li class="nav-item">
+                        <a href="{{ route('voluntarios') }}" class="nav-link">
+                            <i class="nav-icon fas fa-route"></i>
+                            <p>Voluntarios</p>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

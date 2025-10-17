@@ -12,7 +12,7 @@
 @section('content')
 <!-- Filtros -->
 <div class="row mb-3">
-    <div class="col-12">
+    <div class="col-12"> 
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">

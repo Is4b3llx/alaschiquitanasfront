@@ -5,6 +5,7 @@
 @section('page_title', 'Dashboard')
 
 @section('breadcrumb')
+    <li class="breadcrumb-item"><a href="{{ route('home') }}">Inicio</a></li>
     <li class="breadcrumb-item active">Dashboard</li>
 @endsection
 

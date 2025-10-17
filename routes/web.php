@@ -11,6 +11,14 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->name('dashboard');
 
+Route::get('/dashboard/voluntarios', function () {
+    return view('dashboard.voluntarios');
+})->name('voluntarios');
+
+// Agradecimiento
+Route::get('/agradecimiento', function () {
+    return view('agradecimiento.index');
+})->name('agradecimiento');
 // Rutas de Solicitudes
 Route::get('/solicitudes/formulario', function () {
     return view('solicitudes.formulario-solicitud');
