@@ -11,11 +11,16 @@
 
 @section('content')
 <div class="row">
-    <div class="col-12">
+    <div class="col-12 ">
         <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Complete el formulario para solicitar insumos de emergencia</h3>
-        </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h3 class="card-title ">Complete el formulario para solicitar insumos de emergencia</h3>
+                <div class="card-tools ml-auto"> 
+                    <button type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#modalVerificarSolicitud">
+                    <i class="fas fa-search mr-2"></i>Buscar por Codigo
+                </button>  
+                </div>
+            </div>
             <!-- /.card-header -->
             <form action="{{ route('solicitudes.store') }}" method="POST">
             @csrf
@@ -281,6 +286,125 @@
         </div>
     </div>
 </div>
+<!-- Modal Verifica el estado de tu solicitud -->
+<div class="modal fade" id="modalVerificarSolicitud" tabindex="-1" role="dialog" aria-labelledby="modalVerificarSolicitudLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-info d-flex justify-content-between">
+        
+        <h4 class="modal-title" id="modalVerificarSolicitudLabel">
+             Verifica el estado de tu solicitud
+        </h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+         <div class="clear-fix">
+            <div class="input-group pull-right" style="width: 100%;">
+              <input type="text" id="buscarCodigo" class="form-control" placeholder="SJDC001">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-default"  id="btnBuscarCodigo"><i class="fa fa-search"></i></button>
+              </div>
+        </div>
+         </div>
+        <div class="box box-info" id="boxResultado" style="margin-top:15px; display:none;">
+          <div class="box-header with-border">
+            <h3 class="box-title">Resultado de búsqueda</h3>
+          </div>
+          <div class="box-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <dl class="dl-horizontal">
+                  <dt>Código</dt><dd id="resCodigo">SOL-000123</dd>
+                  <dt>Fecha de Solicitud</dt><dd id="resFecha">05/10/2025</dd>
+                  <dt>Estado</dt>
+                  <dd>
+                    <span class="label label-secondary" id="resEstado">En espera</span><br>
+                   </dd>
+                </dl>
+              </div>
+              <div class="col-sm-6">
+                <dl class="dl-horizontal">
+                  <dt>Última actualización</dt><dd id="resUltima">06/10/2025 14:32</dd>
+                </dl>
+              </div>
+            </div>
+
+            <hr style="margin:10px 0">
+
+            <div class="row">
+              <div class="col-sm-6">
+                <h5 class="text-bold">Productos solicitados</h5>
+                <ul class="list-group" id="resSolicitados">
+                  <li class="list-group-item">Agua potable (x 50)</li>
+                  <li class="list-group-item">Frazadas (x 30)</li>
+                  <li class="list-group-item">Arroz 10kg (x 20)</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h5 class="text-bold">Productos aprobados</h5>
+                <ul class="list-group" id="resAprobados">
+                  <li class="list-group-item">Agua potable (x 40)</li>
+                  <li class="list-group-item">Frazadas (x 25)</li>
+                </ul>
+              </div>
+            </div>
+             <button class="btn btn-md btn-info mt-4" id="btnActualizarEntrega" id="btnActualizarEntrega" >
+                      <i class="fa fa-map-marker"></i> Actualizar punto de Entrega
+                    </button>
+                      <div class="box box-info col-12" id="panelMapaEntrega" style="display:none; margin-top:15px;">
+                            <div class="box-header with-border">
+                                <h5 class=""> Selecciona el punto de entrega</h5>
+                            </div>
+                            <div class="box-body">
+                                <p class="text-muted" style="margin-top:-5px;">Haz clic en el mapa para definir el nuevo punto de entrega.</p>
+
+                                <div id="mapEntrega" style="height:320px; background:#f4f6f9; border:1px solid #ddd; position:relative; cursor:pointer;">
+                                <i id="mapMarker" class="fa fa-map-marker"
+                                    style="position:absolute; top:50%; left:50%; transform:translate(-50%,-100%); font-size:28px; color:#dd4b39;"></i>
+                                </div>
+
+                                <div class="row" style="margin-top:10px;">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                    <label>Latitud</label>
+                                    <input type="text" class="form-control input-sm" id="latOut" readonly value="-17.7833">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                    <label>Longitud</label>
+                                    <input type="text" class="form-control input-sm" id="lngOut" readonly value="-63.1821">
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="box-footer text-right">
+                                <button type="button" class="btn btn-default" id="btnCancelarMapa">
+                                    Cancelar
+                                </button>
+                                <button type="button" class="btn btn-success" id="btnGuardarMapa">
+                                Guardar
+                                </button>
+                            </div>
+                            </div>
+    
+          </div>
+          <div class="box-footer mt-4">
+            <span class="text-muted"><i class="fa fa-info-circle ts-small"></i> Los tiempos de entrega pueden variar según disponibilidad.</span>
+          </div>
+        </div>
+      
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 @endsection
 
 @push('styles')
@@ -355,13 +479,11 @@ let paginaActual = 1;
 const productosPorPagina = 5;
 
 $(document).ready(function() {
-    // Hacer el mapa interactivo
     $('#mapaDireccion').click(function(e) {
         var rect = this.getBoundingClientRect();
         var x = e.clientX - rect.left;
         var y = e.clientY - rect.top;
         
-        // Mover el marcador a la nueva posición
         $(this).find('.fa-map-marker-alt').css({
             'position': 'absolute',
             'top': y + 'px',
@@ -369,20 +491,17 @@ $(document).ready(function() {
             'transform': 'translate(-50%, -50%)'
         });
         
-        // Actualizar coordenadas (simulado)
         var lat = (-17.720934 + (Math.random() - 0.5) * 0.01).toFixed(6);
         var lng = (-63.166874 + (Math.random() - 0.5) * 0.01).toFixed(6);
         
         $(this).find('.text-muted').text('Coordenadas: ' + lat + ', ' + lng);
         
-        // Agregar un pequeño feedback visual
         $(this).addClass('map-clicked');
         setTimeout(() => {
             $(this).removeClass('map-clicked');
         }, 200);
     });
     
-    // Controles de zoom (simulados)
     $('#mapaDireccion button:first').click(function(e) {
         e.stopPropagation();
         alert('Zoom in - Funcionalidad simulada');
@@ -564,12 +683,39 @@ function guardarProductos() {
     
     $('#productosSeleccionados').html(html);
     $('#productosSeleccionadosData').val(JSON.stringify(productosSeleccionados));
-    
-    // Cerrar modal
     $('#modalSeleccionarProductos').modal('hide');
-    
-    // Mostrar mensaje de éxito
     toastr.success('Productos seleccionados correctamente');
 }
+//Simulacion de busqueda
+$(document).on('click', '#btnBuscarCodigo', function () {
+  $('#boxResultado').slideDown(150);
+});
+
+$(document).on('click', '#btnActualizarEntrega', function () {
+  $('#panelMapaEntrega').slideDown(150);
+  var $mb = $('#modalVerificarSolicitud .modal-body');
+  $mb.animate({ scrollTop: $mb[0].scrollHeight }, 200);
+});
+
+$(document).on('click', '#mapEntrega', function (e) {
+  var rect = this.getBoundingClientRect();
+  var x = e.clientX - rect.left;
+  var y = e.clientY - rect.top;
+
+  $('#mapMarker').css({ left: x + 'px', top: y + 'px' });
+  var lat = (-17.78 + (Math.random()-0.5) * 0.02).toFixed(6);
+  var lng = (-63.18 + (Math.random()-0.5) * 0.02).toFixed(6);
+  $('#latOut').val(lat);
+  $('#lngOut').val(lng);
+});
+
+$(document).on('click', '#btnCancelarMapa', function () {
+  $('#panelMapaEntrega').slideUp(150);
+});
+
+$(document).on('click', '#btnGuardarMapa', function () {
+  $('#panelMapaEntrega').slideUp(150);
+});
+
 </script>
 @endpush
