@@ -277,6 +277,38 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Confirmar Rechazo - Launch Large Modal -->
+<div class="modal fade" id="modalConfirmarRechazo" tabindex="-1" role="dialog" aria-labelledby="modalConfirmarRechazoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalConfirmarRechazoLabel">Confirmar Rechazo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro que deseas rechazar la solicitud?</p>
+                <div class="form-group">
+                    <label for="motivoRechazo">Motivo del rechazo:</label>
+                    <select class="form-control" id="motivoRechazo" onchange="actualizarMotivoSeleccionado()">
+                        <option value="">Seleccione un motivo...</option>
+                        <option value="informacion_incompleta">La solicitud presenta información incompleta o inconsistente</option>
+                        <option value="destino_atendido">El destino reportado ya fue atendido recientemente con recursos similares</option>
+                        <option value="cantidad_insuficiente">La cantidad de personas afectadas es insuficiente para justificar la asignación de recursos</option>
+                        <option value="no_emergencia">La situación reportada no califica como una emergencia según los criterios establecidos</option>
+                    </select>
+                </div>
+                <p id="motivoSeleccionado" class="mt-3"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="btnConfirmarRechazo" onclick="confirmarRechazo()" disabled>Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @push('styles')
@@ -375,9 +407,51 @@ function aprobar(id) {
 }
 
 function rechazar(id) {
-    if (confirm('¿Está seguro de rechazar esta solicitud?')) {
-        alert('Solicitud #' + String(id).padStart(3, '0') + ' rechazada');
-        // Aquí harías la petición AJAX para rechazar
+    // Guardar el ID de la solicitud para usar en la confirmación
+    $('#modalConfirmarRechazo').data('solicitud-id', id);
+    
+    // Limpiar el formulario
+    $('#motivoRechazo').val('');
+    $('#motivoSeleccionado').text('');
+    $('#btnConfirmarRechazo').prop('disabled', true);
+    
+    // Mostrar el modal
+    $('#modalConfirmarRechazo').modal('show');
+}
+
+function actualizarMotivoSeleccionado() {
+    var motivo = $('#motivoRechazo').val();
+    var motivoTexto = $('#motivoRechazo option:selected').text();
+    
+    if (motivo) {
+        $('#motivoSeleccionado').text('Motivo seleccionado: ' + motivoTexto);
+        $('#btnConfirmarRechazo').prop('disabled', false);
+    } else {
+        $('#motivoSeleccionado').text('');
+        $('#btnConfirmarRechazo').prop('disabled', true);
+    }
+}
+
+function confirmarRechazo() {
+    var solicitudId = $('#modalConfirmarRechazo').data('solicitud-id');
+    var motivo = $('#motivoRechazo').val();
+    var motivoTexto = $('#motivoRechazo option:selected').text();
+    
+    if (motivo) {
+        // Mostrar mensaje de confirmación
+        toastr.success('Solicitud #' + String(solicitudId).padStart(3, '0') + ' rechazada exitosamente');
+        
+        // Cerrar el modal
+        $('#modalConfirmarRechazo').modal('hide');
+        
+        // Aquí harías la petición AJAX para rechazar la solicitud
+        console.log('Rechazando solicitud:', solicitudId, 'Motivo:', motivoTexto);
+        
+        // Simular actualización de la interfaz
+        setTimeout(function() {
+            // Aquí actualizarías el estado de la tarjeta en la interfaz
+            $('.solicitud-card[data-solicitud="' + solicitudId + '"] .badge').removeClass('badge-warning').addClass('badge-danger').text('Rechazada');
+        }, 1000);
     }
 }
 
