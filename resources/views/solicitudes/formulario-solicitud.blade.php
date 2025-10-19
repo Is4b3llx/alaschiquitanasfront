@@ -20,7 +20,7 @@
                     <i class="fas fa-search mr-2"></i>Buscar por Codigo
                 </button>  
                 </div>
-            </div>
+        </div>
             <!-- /.card-header -->
             <form action="{{ route('solicitudes.store') }}" method="POST">
             @csrf
@@ -399,9 +399,9 @@
       
 
       </div>
-    </div>
-  </div>
-</div>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -626,7 +626,7 @@ function actualizarProductosSeleccionadosModal() {
                 </button>
             </div>
                 </div>
-            </div>
+    </div>
         `;
     });
     

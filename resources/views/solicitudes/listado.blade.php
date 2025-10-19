@@ -400,10 +400,19 @@ function verDetalle(id) {
 }
 
 function aprobar(id) {
-    if (confirm('¿Está seguro de aprobar esta solicitud?')) {
-        alert('Solicitud #' + String(id).padStart(3, '0') + ' aprobada');
-        // Aquí harías la petición AJAX para aprobar
-    }
+    // Cambiar solo el badge de estado (no los productos)
+    $('.solicitud-card').each(function() {
+        var cardId = $(this).find('.card-title').text().match(/#(\d+)/);
+        if (cardId && cardId[1] == id) {
+            // Solo cambiar el badge de estado (el que está en card-tools)
+            $(this).find('.card-tools .badge').removeClass('badge-warning').addClass('badge-success').text('Aprobada');
+            $(this).attr('data-estado', 'aprobadas');
+            $(this).find('.card').css('border-top', '3px solid #28a745');
+        }
+    });
+    
+    // Aquí harías la petición AJAX para aprobar
+    console.log('Aprobando solicitud:', id);
 }
 
 function rechazar(id) {
