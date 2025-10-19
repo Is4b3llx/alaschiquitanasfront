@@ -37,11 +37,6 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-md-4 text-right">
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevaDonacion">
-                            <i class="fas fa-plus"></i> Nueva Donación
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
