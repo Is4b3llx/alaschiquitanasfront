@@ -148,9 +148,6 @@
                 <button class="btn btn-primary btn-sm" onclick="verDetalle(2)">
                     <i class="fas fa-eye"></i> Ver Detalle
                 </button>
-                <button class="btn btn-info btn-sm" onclick="actualizarDireccion(2)">
-                    <i class="fas fa-map-marker-alt"></i> Actualizar Dirección
-                </button>
             </div>
         </div>
     </div>
@@ -408,6 +405,10 @@ function aprobar(id) {
             $(this).find('.card-tools .badge').removeClass('badge-warning').addClass('badge-success').text('Aprobada');
             $(this).attr('data-estado', 'aprobadas');
             $(this).find('.card').css('border-top', '3px solid #28a745');
+            
+            // Ocultar botones de Aprobar y Rechazar, dejar solo Ver Detalle
+            $(this).find('.btn-aprobar').hide();
+            $(this).find('.btn-rechazar').hide();
         }
     });
     
@@ -464,10 +465,6 @@ function confirmarRechazo() {
     }
 }
 
-function actualizarDireccion(id) {
-    alert('Actualizar dirección de solicitud #' + String(id).padStart(3, '0'));
-    // Aquí abrirías un modal para actualizar la dirección
-}
 
 </script>
 @endpush

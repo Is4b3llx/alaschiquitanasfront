@@ -89,19 +89,19 @@
                         </a>
                     </li>
                     
-                    <!-- Listado de Donaciones -->
-                    <li class="nav-item">
-                        <a href="{{ route('donaciones.listado') }}" class="nav-link">
-                            <i class="nav-icon fas fa-gift"></i>
-                            <p>Listado de Donaciones</p>
-                        </a>
-                    </li>
-                    
                     <!-- Listado de Solicitudes -->
                     <li class="nav-item">
                         <a href="{{ route('solicitudes.listado') }}" class="nav-link">
                             <i class="nav-icon fas fa-list-alt"></i>
                             <p>Listado de Solicitudes</p>
+                        </a>
+                    </li>
+                    
+                    <!-- Listado de Donaciones -->
+                    <li class="nav-item">
+                        <a href="{{ route('donaciones.listado') }}" class="nav-link">
+                            <i class="nav-icon fas fa-gift"></i>
+                            <p>Listado de Donaciones</p>
                         </a>
                     </li>
                     
