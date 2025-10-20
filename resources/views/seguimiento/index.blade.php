@@ -52,9 +52,7 @@
                 <div class="row no-gutters">
                     <!-- Imagen de la donación -->
                     <div class="col-md-2">
-                        <div class="p-2">
-                            <img src="https://via.placeholder.com/80x60?text=Img" alt="Imagen" class="img-thumbnail" style="width: 80px; height: 60px;">
-                        </div>
+                        <img src="https://www.meganoticias.mx/uploads/noticias/ante-desempleocrece-demande-en-el-banco-de-alimentos-de-lm-147125.jpg" alt="Imagen" class="img-thumbnail" style="width: 180px;">
                     </div>
                     
                     <!-- Información de la donación -->
@@ -127,9 +125,7 @@
                 <div class="row no-gutters">
                     <!-- Imagen de la donación -->
                     <div class="col-md-2">
-                        <div class="p-2">
-                            <img src="https://via.placeholder.com/80x60?text=Img" alt="Imagen" class="img-thumbnail" style="width: 80px; height: 60px;">
-                        </div>
+                        <img src="https://www.comexperu.org.pe/upload/images/hechos-170118-090627.jpg" alt="Imagen" class="img-thumbnail" style="width: 180px;">
                     </div>
                     
                     <!-- Información de la donación -->
@@ -202,9 +198,7 @@
                 <div class="row no-gutters">
                     <!-- Imagen de la donación -->
                     <div class="col-md-2">
-                        <div class="p-2">
-                            <img src="https://via.placeholder.com/80x60?text=Img" alt="Imagen" class="img-thumbnail" style="width: 80px; height: 60px;">
-                        </div>
+                            <img src="https://s1.boliviaimpuestos.com/img/2014/05/12102232/donacione-de-mercaderias-1.jpg" alt="Imagen" class="img-thumbnail">
                     </div>
                     
                     <!-- Información de la donación -->
@@ -276,10 +270,8 @@
             <div class="card-body p-0">
                 <div class="row no-gutters">
                     <!-- Imagen de la donación -->
-                    <div class="col-md-2">
-                        <div class="p-2">
-                            <img src="https://via.placeholder.com/80x60?text=Img" alt="Imagen" class="img-thumbnail" style="width: 80px; height: 60px;">
-                        </div>
+                   <div class="col-md-2">
+                        <img src="https://www.meganoticias.mx/uploads/noticias/ante-desempleocrece-demande-en-el-banco-de-alimentos-de-lm-147125.jpg" alt="Imagen" class="img-thumbnail" style="width: 180px;">
                     </div>
                     
                     <!-- Información de la donación -->
@@ -352,9 +344,7 @@
                 <div class="row no-gutters">
                     <!-- Imagen de la donación -->
                     <div class="col-md-2">
-                        <div class="p-2">
-                            <img src="https://via.placeholder.com/80x60?text=Img" alt="Imagen" class="img-thumbnail" style="width: 80px; height: 60px;">
-                        </div>
+                        <img src="https://www.meganoticias.mx/uploads/noticias/ante-desempleocrece-demande-en-el-banco-de-alimentos-de-lm-147125.jpg" alt="Imagen" class="img-thumbnail" style="width: 180px;">
                     </div>
                     
                     <!-- Información de la donación -->
@@ -426,10 +416,8 @@
             <div class="card-body p-0">
                 <div class="row no-gutters">
                     <!-- Imagen de la donación -->
-                    <div class="col-md-2">
-                        <div class="p-2">
-                            <img src="https://via.placeholder.com/80x60?text=Img" alt="Imagen" class="img-thumbnail" style="width: 80px; height: 60px;">
-                        </div>
+                   <div class="col-md-2">
+                        <img src="https://www.meganoticias.mx/uploads/noticias/ante-desempleocrece-demande-en-el-banco-de-alimentos-de-lm-147125.jpg" alt="Imagen" class="img-thumbnail" style="width: 180px;">
                     </div>
                     
                     <!-- Información de la donación -->
